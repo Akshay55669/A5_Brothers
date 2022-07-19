@@ -8,6 +8,9 @@ import { AboutComponent } from './Pages/about/about.component';
 import { ContactComponent } from './Pages/contact/contact.component';
 import { HeaderComponent } from './StaticPage/header/header.component';
 import { FooterComponent } from './StaticPage/footer/footer.component';
+import { LoginComponent } from './User/login/login.component';
+import { RegisterComponent } from './User/register/register.component';
+import { ForgetPasswordComponent } from './User/forget-password/forget-password.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { FooterComponent } from './StaticPage/footer/footer.component';
     AboutComponent,
     ContactComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    RegisterComponent,
+    ForgetPasswordComponent
   ],
   imports: [
     BrowserModule,
