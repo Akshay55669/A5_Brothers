@@ -1,0 +1,38 @@
+/* h1{
+    font-size: larger;
+    
+} */
+.container-fluid{
+    background-color: rgb(181, 223, 227);
+}
+#contact{
+    font-weight: bolder;
+    font-size: large;
+}
+.row{
+    background-color: grey;
+    border-radius: 20px;
+}
+
+#email{
+    background-color: rgb(153, 198, 153);
+}
+
+#Address{
+    background-color: rgb(213, 200, 200);
+}
+
+#contact{
+    background-color: rgb(153, 198, 153);
+}
+p{
+    font-size: 40px;
+    padding: 10px;
+    align-items: centre;
+    padding-left: 210px;
+    
+}
+h5{
+    font-weight: bold;
+    text-align: center;
+}

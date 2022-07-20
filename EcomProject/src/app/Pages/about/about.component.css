@@ -1,0 +1,14 @@
+.front
+{
+    background-image: url(../../../assets/Image/Aboutbg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 810px ;
+    width: 1528px;
+    padding-left: 700px;
+
+}
+p{
+    color: white;
+}
+
