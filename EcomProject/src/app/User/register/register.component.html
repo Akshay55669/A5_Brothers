@@ -2,17 +2,48 @@
     <div class="Registerbox">
         <img src="../../../assets/Image/Avtar.jpg" alt="Logo" class="Image">
         <h1>Register Here</h1>
-        <form>
+        <form [formGroup]="registerForm" (ngSubmit)="registerSubmit()" autocomplete="off">
             <p>Name</p>
-            <input type="text" name="name"  placeholder="Enter Your Name" required>
+            <input type="text"  name="name" formControlName="Name" placeholder="Enter Your Name" required>
+            <div class="form-text text-danger" *ngIf="Name.errors?.['required']&& (Name.touched||Name.dirty)">
+                The name is required.
+            </div>
+            <div class="form-text text-danger" *ngIf="Name.errors?.['minlength']&& (Name.touched||Name.dirty)">
+                The name is to short.
+            </div>
             <p>Email</p>
-            <input type="text" name="email"  placeholder="Enter Your Email" required>
+            <input type="text"  name="email" formControlName="Email" placeholder="Enter Your Email" required>
+            <div class="form-text text-danger" *ngIf="Email.errors?.['required']&& (Email.touched||Email.dirty)">
+                The Email is required.
+            </div>
+            <div class="form-text text-danger" *ngIf="Email.errors?.['email']&& (Email.touched||Email.dirty)">
+                The Email is invalid.
+            </div>
             <p>Password</p>
-            <input type="password" name="password"  placeholder="Enter Password" required>
+            <input type="password"  name="password" formControlName="Password"  placeholder="Enter Password" required>
+            <div class="form-text text-danger" *ngIf="Password.errors?.['required']&& (Password.touched||Password.dirty)">
+                The Password is required.
+            </div>
             <p>MobileNo</p>
-            <input type="text" name="number"  placeholder="Enter MobileNo" required>
-            <input type="submit" name="submit" value="Register">    
+            <input type="text"  name="number" formControlName="MobileNo"  placeholder="Enter MobileNo" required>
+            <div class="form-text text-danger" *ngIf="MobileNo.errors?.['required']&& (MobileNo.touched||MobileNo.dirty)">
+                Number is required.
+            </div>
+            <div class="form-text text-danger" *ngIf="MobileNo.errors?.['pattern']&& (MobileNo.touched||MobileNo.dirty)">
+                Number is invalid.
+            </div>
+            <div class="form-text text-danger" *ngIf="MobileNo.errors?.['minlength']&& (MobileNo.touched||MobileNo.dirty)">
+                Number is short.
+            </div>
+            <div class="form-text text-danger" *ngIf="MobileNo.errors?.['maxlength']&& (MobileNo.touched||MobileNo.dirty)">
+                Number is long.
+            </div>
+            <div class="form-text text-danger" *ngIf="Name.errors?.['minlength']">
+                The MobileNo is to short.
+            </div>
+            <input type="submit" name="submit" [disabled]="registerForm.invalid"  value="Register">    
         </form>
 
     </div>
 </body>
+ 

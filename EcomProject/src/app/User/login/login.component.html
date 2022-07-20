@@ -1,13 +1,19 @@
 <body>
     <div class="Loginbox">
-        <img src="../../../assets/Image/Avtar.jpg" alt="Grocery image" class="Image">
+        <img src="../../../assets/Image/Avtar.jpg" alt="image" class="Image">
         <h1>Login Here</h1>
-        <form>
+        <form  [formGroup]="loginForm">
             <p>Email</p>
-            <input type="text" name="email" placeholder="Enter your Email" required>
+            <input type="text"  name="email" formControlName="email" placeholder="Enter your Email" required>
+            <div class="form-text text-danger" *ngIf="Email.errors?.['required']&& (Email.touched||Email.dirty)">
+                The Email is required.
+            </div>
+            <div class="form-text text-danger" *ngIf="Email.errors?.['email']&& (Email.touched||Email.dirty)">
+                The Email is invalid.
+            </div>
             <p>Password</p>
-            <input type="password" name="password" placeholder="Enter Password" required>
-            <input type="submit" name="submit" value="Login"><br />&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="password"  name="password" formControlName="password" placeholder="Enter Password" required>
+            <input type="submit" name="submit"  value="Login"><br />&nbsp;&nbsp;&nbsp;&nbsp;
             <a routerLink="../forgetpassword">Forgot_Password? </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a routerLink="../register">SignUp</a>
         </form>
