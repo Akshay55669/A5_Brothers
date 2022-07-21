@@ -4,6 +4,7 @@ import { AboutComponent } from './Pages/about/about.component';
 import { ContactComponent } from './Pages/contact/contact.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { PaymentComponent } from './payment/payment.component';
+import { ProductComponent } from './product/product.component';
 import { ForgetPasswordComponent } from './User/forget-password/forget-password.component';
 import { LoginComponent } from './User/login/login.component';
 import { RegisterComponent } from './User/register/register.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
   {path:'forgetpassword',component:ForgetPasswordComponent},
-  { path:'payment', component:PaymentComponent}
+  { path:'payment', component:PaymentComponent},
+  {path:'product', component:ProductComponent}
 ];
 
 @NgModule({

@@ -16,9 +16,19 @@
       <li class="nav-item">
         <a class="nav-link active" routerLink="/contact">ContactUs</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link active" routerLink="/payment">Payment</a>
-      </li>
+
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+          Components
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="product">Product</a>
+          <a class="dropdown-item" routerLink="payment">Payment</a>
+          <a class="dropdown-item" href="https://icons.getbootstrap.com/" >bootstrap svg icon</a>
+
+        </div>
+      </div>
+
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -32,9 +42,9 @@
   </div>
 </nav>
 
-<!----------------------------------- routing here------------------------------- -->
+<!--------------------------------------------------------- routing here---------------------------------------------------------------- -->
 <router-outlet></router-outlet>
-<!-------------------------------- routing here ------------------------------------>
+<!------------------------------------------------------------- routing here ------------------------------------------------>
 
 <footer class="footer-section">
   <div class="container">

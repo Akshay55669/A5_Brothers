@@ -13,6 +13,7 @@ import { RegisterComponent } from './User/register/register.component';
 import { ForgetPasswordComponent } from './User/forget-password/forget-password.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PaymentComponent } from './payment/payment.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PaymentComponent } from './payment/payment.component';
     LoginComponent,
     RegisterComponent,
     ForgetPasswordComponent,
-    PaymentComponent
+    PaymentComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
