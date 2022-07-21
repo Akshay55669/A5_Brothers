@@ -14,6 +14,8 @@ import { ForgetPasswordComponent } from './User/forget-password/forget-password.
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PaymentComponent } from './payment/payment.component';
 import { ProductComponent } from './product/product.component';
+import { FilterPipe } from './Shared/filter.pipe';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { ProductComponent } from './product/product.component';
     RegisterComponent,
     ForgetPasswordComponent,
     PaymentComponent,
-    ProductComponent
+    ProductComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

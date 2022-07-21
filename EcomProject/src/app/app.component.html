@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" routerLink="">AKShop</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button"
+    data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false"
+       aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -18,10 +21,10 @@
       </li>
 
       <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+        <button class=" btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
           Components
         </button>
-        <div class="dropdown-menu">
+        <div class="dropdown-menu ">
           <a class="dropdown-item" routerLink="product">Product</a>
           <a class="dropdown-item" routerLink="payment">Payment</a>
           <a class="dropdown-item" href="https://icons.getbootstrap.com/" >bootstrap svg icon</a>
@@ -31,21 +34,31 @@
 
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" id="searchbox" type="search" placeholder="Search" aria-label="Search"
+      [(ngModel)]="searchItem" (keyup)="search($event)" >
+      <i id="search"class="bi bi-search"></i>
+      <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
     </form>
     <div class="icon">
       <a class="nav-link active" routerLink="login" routerLinkActive="active-link">
         <img src="./../assets/svg/person-fill.svg" width="30" height="30" >
       </a>
     </div>
+    <div class="icon">
+      <a class="nav-link active" routerLink="login" routerLinkActive="active-link">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+    </div>
   </div>
 </nav>
+<hr>
 
 <!--------------------------------------------------------- routing here---------------------------------------------------------------- -->
 <router-outlet></router-outlet>
-<!------------------------------------------------------------- routing here ------------------------------------------------>
+<!--------------------------------------------------------- routing here---------------------------------------------------------------- -->
 
+
+<!-----------------------------------------------------------Footer Started---------------------------------------------------------------->
 <footer class="footer-section">
   <div class="container">
       <div class="footer-cta pt-2 pb-2" >
@@ -159,3 +172,4 @@
       </div>
   </div>
 </footer>
+<!--------------------------------------------------------Footer Started--------------------------------------------------------------------->
