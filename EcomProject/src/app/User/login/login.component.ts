@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -25,3 +26,4 @@ get Password(): FormControl{
   return this.loginForm.get("password")as FormControl;
 }
 }
+

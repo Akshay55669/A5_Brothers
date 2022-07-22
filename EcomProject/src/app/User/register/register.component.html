@@ -1,49 +1,34 @@
-<body>
-    <div class="Registerbox">
-        <img src="../../../assets/Image/Avtar.jpg" alt="Logo" class="Image">
-        <h1>Register Here</h1>
-        <form [formGroup]="registerForm" (ngSubmit)="registerSubmit()" autocomplete="off">
-            <p>Name</p>
-            <input type="text"  name="name" formControlName="Name" placeholder="Enter Your Name" required>
-            <div class="form-text text-danger" *ngIf="Name.errors?.['required']&& (Name.touched||Name.dirty)">
-                The name is required.
-            </div>
-            <div class="form-text text-danger" *ngIf="Name.errors?.['minlength']&& (Name.touched||Name.dirty)">
-                The name is to short.
-            </div>
-            <p>Email</p>
-            <input type="text"  name="email" formControlName="Email" placeholder="Enter Your Email" required>
-            <div class="form-text text-danger" *ngIf="Email.errors?.['required']&& (Email.touched||Email.dirty)">
-                The Email is required.
-            </div>
-            <div class="form-text text-danger" *ngIf="Email.errors?.['email']&& (Email.touched||Email.dirty)">
-                The Email is invalid.
-            </div>
-            <p>Password</p>
-            <input type="password"  name="password" formControlName="Password"  placeholder="Enter Password" required>
-            <div class="form-text text-danger" *ngIf="Password.errors?.['required']&& (Password.touched||Password.dirty)">
-                The Password is required.
-            </div>
-            <p>MobileNo</p>
-            <input type="text"  name="number" formControlName="MobileNo"  placeholder="Enter MobileNo" required>
-            <div class="form-text text-danger" *ngIf="MobileNo.errors?.['required']&& (MobileNo.touched||MobileNo.dirty)">
-                Number is required.
-            </div>
-            <div class="form-text text-danger" *ngIf="MobileNo.errors?.['pattern']&& (MobileNo.touched||MobileNo.dirty)">
-                Number is invalid.
-            </div>
-            <div class="form-text text-danger" *ngIf="MobileNo.errors?.['minlength']&& (MobileNo.touched||MobileNo.dirty)">
-                Number is short.
-            </div>
-            <div class="form-text text-danger" *ngIf="MobileNo.errors?.['maxlength']&& (MobileNo.touched||MobileNo.dirty)">
-                Number is long.
-            </div>
-            <div class="form-text text-danger" *ngIf="Name.errors?.['minlength']">
-                The MobileNo is to short.
-            </div>
-            <input type="submit" name="submit" [disabled]="registerForm.invalid"  value="Register">    
-        </form>
 
-    </div>
-</body>
- 
+    <section class="container-fluid forms">
+      <div class="form login">
+          <div class="form-content">
+              <h2>Register</h2>
+              <form >
+                  <div class="field input-field">
+                      <input type="Name" [formControl]="Name" placeholder="Name" class="input">
+                      <i class="bi bi-person-fill person-icon"></i>
+                  </div>
+                  <div class="field input-field">
+                      <input type="Email" [formControl]="Email" placeholder="Email" class="input">
+                      <i class="bi bi-envelope email-icon"></i>
+                  </div>
+                  <div class="field input-field">
+                      <input type="MobileNo" [formControl]="MobileNo" placeholder="MobileNo" class="input">
+                      <i class="bi bi-phone mob-icon"></i>
+                  </div>
+                  <div class="field input-field">
+                      <input type="password" [formControl]="Password" placeholder="Password" class="password">
+                      <i class="bi bi-eye-slash eye-icon"></i>
+                  </div>
+                  <div class="field input-field">
+                      <input type="password" placeholder="Confirm Password" class="password">
+                      <i class="bi bi-eye-slash eye-icon"></i>
+                  </div>
+
+                  <div class="field button-field">
+                      <button routerLink="/login" (click)="registerSubmit()" >Register</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+</section>
