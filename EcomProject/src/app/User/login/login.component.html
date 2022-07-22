@@ -4,18 +4,18 @@
           <h2>Login</h2>
           <form >
               <div class="field input-field">
-                  <input type="email" placeholder="Email" class="input">
+                  <input type="email" [formControl]="Email" placeholder="Email" class="input">
                   <i class="bi bi-envelope email-icon"></i>
               </div>
 
               <div class="field input-field">
-                  <input type="password" placeholder="Password" class="password">
+                  <input type="password" [formControl]="Password" placeholder="Password" class="password">
                   <i class="bi bi-eye-slash eye-icon"></i>
               </div>
 
 
               <div class="field">
-                  <button>Login</button>
+                  <button (click)="loginSubmit()" >Login</button>
               </div>
           </form>
 
@@ -23,7 +23,7 @@
               <span>Don't have an account? <a routerLink="/register" class="link signup-link">Signup</a></span>
           </div>
           <div class="form-link">
-              <a routerLink="/forgetpassword" class="forgot-pass">Forgot password?</a>
+              <a routerLink="/forgetpassword"  class="forgot-pass">Forgot password?</a>
           </div>
       </div>
   </div>

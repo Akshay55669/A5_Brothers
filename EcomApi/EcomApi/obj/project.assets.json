@@ -8248,11 +8248,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\WebProject\\EcomApi\\EcomApi\\EcomApi.csproj",
+      "projectUniqueName": "D:\\Old\\A5_Brothers\\EcomApi\\EcomApi\\EcomApi.csproj",
       "projectName": "EcomApi",
-      "projectPath": "D:\\WebProject\\EcomApi\\EcomApi\\EcomApi.csproj",
+      "projectPath": "D:\\Old\\A5_Brothers\\EcomApi\\EcomApi\\EcomApi.csproj",
       "packagesPath": "C:\\Users\\Akshay\\.nuget\\packages\\",
-      "outputPath": "D:\\WebProject\\EcomApi\\EcomApi\\obj\\",
+      "outputPath": "D:\\Old\\A5_Brothers\\EcomApi\\EcomApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Akshay\\AppData\\Roaming\\NuGet\\NuGet.Config",
