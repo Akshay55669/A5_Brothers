@@ -13,7 +13,7 @@ import { matDatepickerAnimations, MatDatepickerModule } from '@angular/material/
 import { LoginComponent } from './User/login/login.component';
 
 import { ForgetPasswordComponent } from './User/forget-password/forget-password.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PaymentComponent } from './payment/payment.component';
 import { ProductComponent } from './product/product.component';
 import { FilterPipe } from './Shared/filter.pipe';
@@ -21,6 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './Admin/dashboard/dashboard.component';
 import { RegisterComponent } from './User/register/register.component';
+
+
 
 
 
@@ -37,7 +39,8 @@ import { RegisterComponent } from './User/register/register.component';
     ProductComponent,
     FilterPipe,
     DashboardComponent,
-    RegisterComponent
+    RegisterComponent,
+
 
 
 
@@ -46,11 +49,13 @@ import { RegisterComponent } from './User/register/register.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

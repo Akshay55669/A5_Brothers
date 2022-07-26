@@ -9,6 +9,7 @@ import { SearchService } from './Services/search.service';
 })
 export class AppComponent implements OnInit {
   public searchItem:string='';
+  public title='Ecomproject';
 
   constructor(private router:Router,public searchservice:SearchService){}
   ngOnInit(): void {
